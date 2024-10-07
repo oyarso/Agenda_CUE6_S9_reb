@@ -1,0 +1,39 @@
+{% extends 'layout.html' %} 
+{% load bootstrap5 %} 
+ 
+{% block content %}
+
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Libros</title> 
+</head> 
+<body> 
+    <p><b>Libros con una valoración mayor a 1500 puntos</b></p>      
+
+{% for i in items %}
+
+    {% if i.valoracion > 1500 %}
+        Titulo: {{i.titulo}}, 
+        Autor: {{i.autor}},
+        Valoración: {{i.valoracion}}     <br>
+    {% endif %}    
+
+{% endfor %}
+
+
+<br>    <p><b>Listado de todos los libros:</b></p>      
+
+{% for i in items %}
+    Titulo: {{i.titulo}},
+    Autor: {{i.autor}} <br>
+{% endfor %}
+            
+        
+</body> 
+</html>
+
+{% endblock content%}

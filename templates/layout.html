@@ -1,0 +1,16 @@
+{% block body %} 
+<body class="hold-transition layout-top-nav"> 
+<div class="wrapper"> 
+<!-- Header --> 
+{% include 'menu.html' %} 
+{% block content %} 
+{% endblock %} 
+<!-- Footer --> 
+{% include 'footer.html' %} 
+</div> 
+<!-- Block javascript --> 
+{% block javascript %} 
+
+{% endblock javascript %} 
+</body> 
+{% endblock body%} 
